@@ -13,6 +13,7 @@
 		5BBAE12127F5AEDB009C3EC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BBAE11F27F5AEDB009C3EC9 /* Main.storyboard */; };
 		5BBAE12327F5AEDC009C3EC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BBAE12227F5AEDC009C3EC9 /* Assets.xcassets */; };
 		5BBAE12627F5AEDC009C3EC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BBAE12427F5AEDC009C3EC9 /* LaunchScreen.storyboard */; };
+		5BBAE12E27F5AF29009C3EC9 /* PersonsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBAE12D27F5AF29009C3EC9 /* PersonsListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5BBAE12227F5AEDC009C3EC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BBAE12527F5AEDC009C3EC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BBAE12727F5AEDC009C3EC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BBAE12D27F5AF29009C3EC9 /* PersonsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				5BBAE12227F5AEDC009C3EC9 /* Assets.xcassets */,
 				5BBAE12427F5AEDC009C3EC9 /* LaunchScreen.storyboard */,
 				5BBAE12727F5AEDC009C3EC9 /* Info.plist */,
+				5BBAE12D27F5AF29009C3EC9 /* PersonsListTableViewController.swift */,
 			);
 			path = ContactsApp;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BBAE12E27F5AF29009C3EC9 /* PersonsListTableViewController.swift in Sources */,
 				5BBAE11E27F5AEDB009C3EC9 /* ViewController.swift in Sources */,
 				5BBAE11A27F5AEDB009C3EC9 /* AppDelegate.swift in Sources */,
 				5BBAE11C27F5AEDB009C3EC9 /* SceneDelegate.swift in Sources */,
@@ -303,7 +307,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -330,7 +334,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
