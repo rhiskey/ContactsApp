@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B5534CA27F5BC9100DF0AF1 /* PersonDetailsExtendedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5534C927F5BC9100DF0AF1 /* PersonDetailsExtendedTableViewController.swift */; };
+		5B5534CC27F5BCCC00DF0AF1 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5534CB27F5BCCC00DF0AF1 /* TabBarViewController.swift */; };
+		5B74306627F5B034003EAFFB /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B74306527F5B034003EAFFB /* Person.swift */; };
+		5B74306D27F5B0FA003EAFFB /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B74306C27F5B0FA003EAFFB /* DataManager.swift */; };
 		5BBAE11A27F5AEDB009C3EC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBAE11927F5AEDB009C3EC9 /* AppDelegate.swift */; };
 		5BBAE11C27F5AEDB009C3EC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBAE11B27F5AEDB009C3EC9 /* SceneDelegate.swift */; };
-		5BBAE11E27F5AEDB009C3EC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBAE11D27F5AEDB009C3EC9 /* ViewController.swift */; };
+		5BBAE11E27F5AEDB009C3EC9 /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBAE11D27F5AEDB009C3EC9 /* PersonDetailsViewController.swift */; };
 		5BBAE12127F5AEDB009C3EC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BBAE11F27F5AEDB009C3EC9 /* Main.storyboard */; };
 		5BBAE12327F5AEDC009C3EC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BBAE12227F5AEDC009C3EC9 /* Assets.xcassets */; };
 		5BBAE12627F5AEDC009C3EC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BBAE12427F5AEDC009C3EC9 /* LaunchScreen.storyboard */; };
@@ -17,10 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B5534C927F5BC9100DF0AF1 /* PersonDetailsExtendedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsExtendedTableViewController.swift; sourceTree = "<group>"; };
+		5B5534CB27F5BCCC00DF0AF1 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		5B74306527F5B034003EAFFB /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		5B74306C27F5B0FA003EAFFB /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		5BBAE11627F5AEDB009C3EC9 /* ContactsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BBAE11927F5AEDB009C3EC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BBAE11B27F5AEDB009C3EC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5BBAE11D27F5AEDB009C3EC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5BBAE11D27F5AEDB009C3EC9 /* PersonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewController.swift; sourceTree = "<group>"; };
 		5BBAE12027F5AEDB009C3EC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BBAE12227F5AEDC009C3EC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BBAE12527F5AEDC009C3EC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +47,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B74306727F5B074003EAFFB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5B74306527F5B034003EAFFB /* Person.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5B74306827F5B07E003EAFFB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BBAE11D27F5AEDB009C3EC9 /* PersonDetailsViewController.swift */,
+				5BBAE12D27F5AF29009C3EC9 /* PersonsListTableViewController.swift */,
+				5B5534C927F5BC9100DF0AF1 /* PersonDetailsExtendedTableViewController.swift */,
+				5B5534CB27F5BCCC00DF0AF1 /* TabBarViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5B74306927F5B08A003EAFFB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5BBAE11927F5AEDB009C3EC9 /* AppDelegate.swift */,
+				5BBAE11B27F5AEDB009C3EC9 /* SceneDelegate.swift */,
+				5BBAE12727F5AEDC009C3EC9 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5B74306A27F5B0B1003EAFFB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5BBAE11F27F5AEDB009C3EC9 /* Main.storyboard */,
+				5BBAE12427F5AEDC009C3EC9 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5B74306B27F5B0BB003EAFFB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5BBAE12227F5AEDC009C3EC9 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		5BBAE10D27F5AEDB009C3EC9 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +112,12 @@
 		5BBAE11827F5AEDB009C3EC9 /* ContactsApp */ = {
 			isa = PBXGroup;
 			children = (
-				5BBAE11927F5AEDB009C3EC9 /* AppDelegate.swift */,
-				5BBAE11B27F5AEDB009C3EC9 /* SceneDelegate.swift */,
-				5BBAE11D27F5AEDB009C3EC9 /* ViewController.swift */,
-				5BBAE11F27F5AEDB009C3EC9 /* Main.storyboard */,
-				5BBAE12227F5AEDC009C3EC9 /* Assets.xcassets */,
-				5BBAE12427F5AEDC009C3EC9 /* LaunchScreen.storyboard */,
-				5BBAE12727F5AEDC009C3EC9 /* Info.plist */,
-				5BBAE12D27F5AF29009C3EC9 /* PersonsListTableViewController.swift */,
+				5B74306927F5B08A003EAFFB /* App */,
+				5B74306827F5B07E003EAFFB /* ViewControllers */,
+				5B74306A27F5B0B1003EAFFB /* Storyboards */,
+				5B74306B27F5B0BB003EAFFB /* Resources */,
+				5B74306727F5B074003EAFFB /* Models */,
+				5B74306C27F5B0FA003EAFFB /* DataManager.swift */,
 			);
 			path = ContactsApp;
 			sourceTree = "<group>";
@@ -141,9 +193,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B5534CC27F5BCCC00DF0AF1 /* TabBarViewController.swift in Sources */,
+				5B74306627F5B034003EAFFB /* Person.swift in Sources */,
+				5B74306D27F5B0FA003EAFFB /* DataManager.swift in Sources */,
 				5BBAE12E27F5AF29009C3EC9 /* PersonsListTableViewController.swift in Sources */,
-				5BBAE11E27F5AEDB009C3EC9 /* ViewController.swift in Sources */,
+				5BBAE11E27F5AEDB009C3EC9 /* PersonDetailsViewController.swift in Sources */,
 				5BBAE11A27F5AEDB009C3EC9 /* AppDelegate.swift in Sources */,
+				5B5534CA27F5BC9100DF0AF1 /* PersonDetailsExtendedTableViewController.swift in Sources */,
 				5BBAE11C27F5AEDB009C3EC9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +348,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ContactsApp/Info.plist;
+				INFOPLIST_FILE = ContactsApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +375,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ContactsApp/Info.plist;
+				INFOPLIST_FILE = ContactsApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
