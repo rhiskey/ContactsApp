@@ -1,5 +1,5 @@
 //
-//  PersonDetailsExtendedTableViewController.swift
+//  ContactsTableViewController.swift
 //  ContactsApp
 //
 //  Created by Владимир Киселев on 31.03.2022.
@@ -7,39 +7,34 @@
 
 import UIKit
 
-class PersonDetailsExtendedTableViewController: UITableViewController {
-    var personsList: [Person]!
+class ContactsTableViewController: UITableViewController {
+    
+    var persons: [Person]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.leftBarButtonItem = editButtonItem
+        tableView.rowHeight = 80
     }
-
+    
     // MARK: - Table view data source
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        personsList.count
+        persons.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personID", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        let person = personsList[indexPath.row]
+        let person = persons[indexPath.row]
         
         content.text = person.fullName
-        
         cell.contentConfiguration = content
+        
         return cell
     }
     
-    
     // MARK: - Table view delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let person = personsList[indexPath.row]
+        let person = persons[indexPath.row]
         performSegue(withIdentifier: "showPersonDetails", sender: person)
     }
     
@@ -52,8 +47,8 @@ class PersonDetailsExtendedTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let currentPerson = personsList.remove(at: sourceIndexPath.row)
-        personsList.insert(currentPerson, at: destinationIndexPath.row)
+        let currentPerson = persons.remove(at: sourceIndexPath.row)
+        persons.insert(currentPerson, at: destinationIndexPath.row)
     }
     
     // MARK: - Navigation

@@ -1,5 +1,5 @@
 //
-//  PersonsListTableViewController.swift
+//  ContactsSectionTableViewController.swift
 //  ContactsApp
 //
 //  Created by Владимир Киселев on 31.03.2022.
@@ -7,34 +7,46 @@
 
 import UIKit
 
-class PersonsListTableViewController: UITableViewController {
+
+class ContactsSectionTableViewController: UITableViewController {
     var personsList: [Person]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 80
         navigationItem.leftBarButtonItem = editButtonItem
     }
-    
+
     // MARK: - Table view data source
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return personsList.count
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection
+                            section: Int) -> String? {
+        return "\(personsList[section].fullName)"
+    }
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        personsList.count
+        1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personID", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        let person = personsList[indexPath.row]
         
-        content.text = person.fullName
+        let person = personsList[indexPath.section]
+
+        content.text = person.phone
+        content.image = .add
+        content.secondaryText = person.email
         
         cell.contentConfiguration = content
         return cell
     }
-    
+
     // MARK: - Table view delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let person = personsList[indexPath.row]
+        let person = personsList[indexPath.section]
         performSegue(withIdentifier: "showPersonDetails", sender: person)
     }
     

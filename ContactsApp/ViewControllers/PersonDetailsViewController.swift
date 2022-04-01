@@ -18,6 +18,7 @@ class PersonDetailsViewController: UIViewController {
         navigationItem.title = person.fullName
         phoneLB.text = "Phone: \(person.phone)"
         emailLB.text = "Email: \(person.email)"
+        title = person.fullName
     }
 
 
