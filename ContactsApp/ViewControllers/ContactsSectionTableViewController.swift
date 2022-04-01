@@ -18,12 +18,12 @@ class ContactsSectionTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return personsList.count
+        personsList.count
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection
                             section: Int) -> String? {
-        return "\(personsList[section].fullName)"
+        "\(personsList[section].fullName)"
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

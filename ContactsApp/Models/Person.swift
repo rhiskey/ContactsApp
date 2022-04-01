@@ -26,10 +26,10 @@ struct PersonList {
         
         dm.names.forEach {
             name in
-            let randomName = dm.names.randomElement()!
-            let randomSurname = dm.surnames.randomElement()!
-            let randomPhone = dm.phones.randomElement()!
-            let randomEmail = dm.emails.randomElement()!
+            let randomName = dm.names.randomElement() ?? ""
+            let randomSurname = dm.surnames.randomElement() ?? ""
+            let randomPhone = dm.phones.randomElement() ?? ""
+            let randomEmail = dm.emails.randomElement() ?? ""
             
             let user = Person(
                 name: randomName,
