@@ -23,11 +23,11 @@ class ContactsSectionTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection
                             section: Int) -> String? {
-        "\(personsList[section].fullName)"
+        personsList[section].fullName
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        2
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -36,9 +36,14 @@ class ContactsSectionTableViewController: UITableViewController {
         
         let person = personsList[indexPath.section]
 
-        content.text = person.phone
-        content.image = .add
-        content.secondaryText = person.email
+        switch indexPath.row {
+        case 0:
+            content.text = person.phone
+            content.image = .checkmark
+        default:
+            content.text = person.email
+            content.image = .add
+        }
         
         cell.contentConfiguration = content
         return cell
@@ -47,6 +52,7 @@ class ContactsSectionTableViewController: UITableViewController {
     // MARK: - Table view delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let person = personsList[indexPath.section]
+        tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "showPersonDetails", sender: person)
     }
     

@@ -48,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B1C2C5527F83D7200F4E8ED /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5B74306C27F5B0FA003EAFFB /* DataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		5B74306727F5B074003EAFFB /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,7 +127,7 @@
 				5B74306A27F5B0B1003EAFFB /* Storyboards */,
 				5B74306B27F5B0BB003EAFFB /* Resources */,
 				5B74306727F5B074003EAFFB /* Models */,
-				5B74306C27F5B0FA003EAFFB /* DataManager.swift */,
+				5B1C2C5527F83D7200F4E8ED /* Services */,
 			);
 			path = ContactsApp;
 			sourceTree = "<group>";

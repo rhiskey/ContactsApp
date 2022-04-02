@@ -18,27 +18,29 @@ struct Person {
     }
 }
 
-struct PersonList {
+extension Person {
     static func getPersonList() -> [Person] {
-        let dm = DataManager()
+        let dm = DataManager.shared
         
         var persons: [Person] = []
         
-        dm.names.forEach {
-            name in
-            let randomName = dm.names.randomElement() ?? ""
-            let randomSurname = dm.surnames.randomElement() ?? ""
-            let randomPhone = dm.phones.randomElement() ?? ""
-            let randomEmail = dm.emails.randomElement() ?? ""
-            
+        let names = dm.names.shuffled()
+        let surnames = dm.surnames.shuffled()
+        let phones = dm.phones.shuffled()
+        let emails = dm.emails.shuffled()
+        
+        let iterationCount = min(names.count, surnames.count, phones.count, emails.count)
+        
+        for index in 0..<iterationCount {
             let user = Person(
-                name: randomName,
-                surname: randomSurname,
-                phone: randomPhone,
-                email: randomEmail
+                name: names[index],
+                surname: surnames[index],
+                phone: phones[index],
+                email: emails[index]
             )
             persons.append(user)
         }
+        
         return persons
         
     }
